@@ -6,34 +6,31 @@
 # в качестве делителя.
 
 
-def mat(m, n):
-    while True:
-        z = input('Введите +, -, *, / для выполнения соотвествующей\n'
-                  'математической операции или 0 для завершения: ')
-        if z == '+':
-            return f'{m} {z} {n} = {m + n}'
-        elif z == '-':
-            return f'{m} {z} {n} = {m - n}'
-        elif z == '*':
-            return f'{m} {z} {n} = {m * n}'
-        elif z == '/':
-            if b != 0:
-                return f'{m} {z} {n} = {m / n}'
-            else:
-                return 'Ошибка! Деление на ноль.'
-        elif z == '0':
-            return exit
+def mat(m, n, s):
+    if s == '+':
+        return m + n
+    elif a == '-':
+        return m - n
+    elif s == '*':
+        return m * n
+    else:
+        if b != 0:
+            return m / n
         else:
-            print('Ошибка! Введена не верная операция!!!')
+            return 'Ошибка! Деление на ноль.'
 
 
 if __name__ == '__main__':
-
-    result = None
-    while result != exit:
-        a = float(input('Введите певрвое число: '))
-        b = float(input('Введите второе число: '))
-        result = mat(a, b)
-        if result != 'exit':
-            print(result)
+    while True:
+        z = input('Ведите знак операции (+,-,*,/) или 0 для завершения программы: ')
+        if z == '0':
+            break
+        else:
+            if z in ('+','-','*','/'):
+                a = float(input('Введите певрвое число: '))
+                b = float(input('Введите второе число: '))
+                result = mat(a, b, z)
+                print(f'{a} {z} {b} = {result}')
+            else:
+                print('Введена не корректная операция')
     print('Программа завершена')
