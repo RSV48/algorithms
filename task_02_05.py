@@ -8,7 +8,7 @@ def view_ascll(a, b):
         for i in range(a, a + 10):
             s += str(i) + ' - "' + chr(i) + '" '
         print(s)
-        view_ascll(a + 10, b)
+        return view_ascll(a + 10, b)
     else:
         for i in range(a, b + 1):
             s += str(i) + ' - ' + chr(i) + ' '
