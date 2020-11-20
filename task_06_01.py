@@ -43,6 +43,7 @@ MIN_ITEM = 0
 MAX_ITEM = 1000
 array_static = [[random.randint(MIN_ITEM, MAX_ITEM) for j in range(COLUMN)] for i in range(LINE)]
 
+
 # ************************ 5x5 *************************
 # Переменная LINE            Тип переменной = <class 'int'>, Выделено памяти = 28
 # Переменная COLUMN          Тип переменной = <class 'int'>, Выделено памяти = 28
@@ -71,6 +72,7 @@ def m_for_in(matrix=array_static):
     for el in min_column:
         max_el = el if el > max_el else max_el
     return max_el
+
 
 # ************************ 5x5 *************************
 # Наименование функции: m_for_in
@@ -107,6 +109,7 @@ def m_while(matrix=array_static):
         j += 1
     return max_el
 
+
 # ************************ 5x5 *************************
 # Наименование функции: m_while
 # Переменная matrix          Тип переменной = <class 'list'>, Выделено памяти = 1420
@@ -132,6 +135,7 @@ def m_min_max(matrix=array_static):
         for line in matrix:
             min_el.append(min(line))
     return max(min_el)
+
 
 # ************************ 5x5 *************************
 # Наименование функции: m_min_max
@@ -190,7 +194,7 @@ def var_size(x):
 
 
 def trace_module(loc):
-    print(f'{"*"*50} \nПеременные модуля:')
+    print(f'{"*" * 50} \nПеременные модуля:')
     total_size = 0
     for var in loc.keys():
         t = str(type(loc[var]))
