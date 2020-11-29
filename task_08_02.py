@@ -48,7 +48,7 @@ def my_code(obj, list_letter):
 text = input('Ведите строку:')  # Корабли лавировали, лавировали, да не вылавировали!!!
 string = Counter(text)
 fol = []
-
+print(string)
 for char in string.keys():
     fol.append(Foliage(char, string[char], []))
 
@@ -58,3 +58,5 @@ my_code(tree, fol)
 
 print(f'{"*" * 10} Результат кодирования {"*" * 10}')
 print(*[key.letters + ': ' + ''.join(key.code) for key in fol], sep='\n')
+
+print(locals())
