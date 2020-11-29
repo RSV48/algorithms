@@ -21,3 +21,4 @@ for div in range(MIN_DIV, MAX_DIV + 1):
     for j in range(MIN_ITEM, MAX_ITEM + 1):
         result2 += 1 if j % div == 0 else 0
     print(f'{result2} натуральных чисел от {MIN_ITEM} до {MAX_ITEM} кратны {div}')
+#
